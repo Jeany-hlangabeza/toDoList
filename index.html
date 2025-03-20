@@ -4,7 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="app.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="toDoList">
+        <h1>
+          To do List
+          <img
+            src="https://i0.wp.com/rajiv.com/wp-content/uploads/2021/11/dd570-checklist.png?resize=602%2C602&ssl=1"
+            alt="heading Icon"
+          />
+        </h1>
+        <div class="userInput">
+          <input type="text" id="inputField" class="inputField" />
+          <button class="btn">Add</button>
+        </div>
+        <div class="todoItems">
+          <ul>
+            <li>
+              <label for="task1">Take kids to school</label>
+              <input type="checkbox" id="task1" class="checkbox" />
+            </li>
+            <li>
+              <label for="task2">cook</label>
+              <input type="checkbox" id="task2" class="checkbox" />
+            </li>
+            <li>
+              <label for="task3">cook</label>
+              <input type="checkbox" id="task3" class="checkbox" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
