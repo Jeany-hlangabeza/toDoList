@@ -70,26 +70,71 @@ body {
   text-align: left;
   font-size: 20px;
   margin-top: 15px;
+  flex: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding-right: 10px;
+  white-space: normal;
+}
+.todoItems ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
 .todoItems ul li {
-  font-style: italic;
-
-  margin-bottom: 18px;
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
   width: 100%;
+  position: relative;
+  color: #1b1a1a;
+  font-style: italic;
 }
-.checkbox {
-  justify-self: end;
+
+.todoItems ul li label {
+  flex: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding-right: 10px;
+  white-space: normal;
+  max-width: 50%;
 }
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  min-width: 80px;
+  justify-content: flex-end;
+}
+
+.icons input[type="checkbox"],
+.icons span {
+  flex-shrink: 0;
+}
+
 input[type="checkbox"] {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  margin: 0 40px;
+}
+
+.material-symbols-outlined {
+  font-size: 24px;
+  cursor: pointer;
+  color: #534f4f;
+  transition: color 0.3s ease;
+}
+
+.material-symbols-outlined:hover {
+  color: #3f3838;
+  transform: translateY(-10%);
+  transition: all 200ms ease-in-out;
 }
 
 input[type="checkbox"]:checked {
