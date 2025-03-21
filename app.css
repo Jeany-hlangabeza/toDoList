@@ -17,7 +17,7 @@ body {
 .container {
   background-color: rgba(240, 248, 255, 0.2);
   border-radius: 5%;
-  width: 40%;
+  width: 80%;
 }
 
 .container .toDoList {
@@ -151,9 +151,10 @@ input[type="checkbox"]:checked {
   color: white;
 }
 
-@media (max-width: 600px) {
+/* @media (min-width: 600px) {
   .container {
     width: 90%;
+    font-size: 18px;
   }
   .todoItems {
     font-size: 18px;
@@ -178,15 +179,19 @@ input[type="checkbox"]:checked {
     width: 18px;
     height: 18px;
   }
-}
+} */
 
 @media (max-width: 768px) {
   .container {
     width: 90%;
   }
+  .userInput .btn {
+    width: 30%;
+    border: 1px solid #49e7b5;
+  }
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .container {
     width: 85%;
   }
@@ -213,4 +218,4 @@ input[type="checkbox"]:checked {
     font-size: 35px;
     padding-top: 30px;
   }
-}
+} */
