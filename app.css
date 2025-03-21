@@ -104,6 +104,11 @@ body {
   max-width: 50%;
 }
 
+label.struck-through {
+  text-decoration: line-through;
+  color: #534f4f;
+}
+
 .icons {
   display: flex;
   align-items: center;

@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const inputField = document.querySelector("#inputField");
   const addBtn = document.querySelector(".btn");
   const todoList = document.querySelector(".todoItems ul");
+  let taskCount = 0;
 
   addBtn.addEventListener("click", function () {
     addTodo();
@@ -17,10 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const items = inputField.value.trim();
     if (items === "") return;
 
+    taskCount++;
+
     const li = document.createElement("li");
     const label = document.createElement("label");
 
-    label.textContent = items;
+    label.textContent = `${taskCount}. ${items}`;
 
     const iconsDiv = document.createElement("div");
     iconsDiv.classList.add("icons");
@@ -35,6 +38,15 @@ document.addEventListener("DOMContentLoaded", function () {
     deleteIcon.addEventListener("click", function () {
       li.remove();
     });
+
+    checkbox.addEventListener("change", function () {
+      if (checkbox.checked) {
+        label.classList.add("struck-through");
+      } else {
+        label.classList.remove("struck-through");
+      }
+    });
+
     iconsDiv.appendChild(checkbox);
     iconsDiv.appendChild(deleteIcon);
     li.appendChild(label);
